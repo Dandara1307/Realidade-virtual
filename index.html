@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicação de Realidade Virtual (VR)</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Imagem de fundo -->
+      <a-sky src="background.jpg" rotation="0 -90 0"></a-sky>
+
+      <!-- Objeto clicável 1 -->
+      <a-box
+        position="-1 0.5 -3"
+        rotation="0 45 0"
+        color="#4CC3D9"
+        shadow
+      ></a-box>
+      <a-text
+        value=""
+        position="-1 1.5 -3"
+        align="center"
+        color="white"
+      ></a-text>
+
+      <!-- Objeto clicável 2 -->
+      <a-sphere
+        position="1 0.5 -3"
+        radius="0.5"
+        color="#EF2D5E"
+        shadow
+      ></a-sphere>
+      <a-text
+        value="Clique  para mais informações"
+        position="1 1.5 -3"
+        align="center"
+        color="white"
+      ></a-text>
+
+      <!-- Câmera do usuário -->
+      <a-camera position="0 1.6 0">
+        <a-cursor raycaster="objects: .clickable"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
